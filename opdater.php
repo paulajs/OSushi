@@ -20,7 +20,7 @@
 <?php
 $name = trim($_POST['name']);
 $tlf =  trim($_POST['tlf']);
-$email =trim($_POST['email']);
+$email = trim($_POST['email']);
 $pers = trim($_POST['pers']);
 $date = trim($_POST['date']);
 $time = trim($_POST['time']);
@@ -40,15 +40,17 @@ else{
 	$dbc = mysqli_connect('localhost', 'root', 'root', 'Bestil_Bord') // connect to database
 	or die('Error connecting to MySQL server.');
 
-	$query = "UPDATE `reservationer` SET name ='$name', tlf='$tlf', email='$email', pers ='$pers', dato ='$date', `time` ='$time', comments ='$comments'  WHERE `best_nr`= '$bestnr'";
-
+	$query = 'UPDATE `reservationer` SET name =?, tlf=?, email=?, pers=?, dato=?, `time`=?, comments=? WHERE `best_nr`= ?';
+	$statement = mysqli_prepare($dbc, $query);
+	mysqli_stmt_bind_param(
+		$statement,
+		'ssssssss',
+		$name, $tlf, $email, $pers, $date, $time, $comments, $bestnr
+	);
+	$result = mysqli_stmt_execute($statement);
 	$msg = 'Du har ændret din reservation til'.$pers.' d. '.$display_date.' kl. '.$display_time.'. Dit bestillings-nymmer er stadig '.$bestnr;
 
 	//mail(/*$email*/'paulajoannasobczak@gmail.com', $subject, $msg, 'From: OrientalSushi@mail.dk');
-
-	$result = mysqli_query($dbc, $query)
-	or die('Error querying database.');
-
 	mysqli_close($dbc);
 
 	?>
