@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<!-- **************************************Forside***********************************  -->	
+<!-- **************************************Forside***********************************  -->
 <div data-role="page" id="page1">
 <?php require 'header.php'; ?>
 <div data-role="content">
@@ -32,21 +32,21 @@
 		<div class="ui-block-a">
 			<img src="billeder/pic2ph.jpg" alt="Menukort">
 			<h2>Menukort</h2>
-		</a>	
+		</a>
 		</div>
 		<div class="ui-block-b">
 		<a href="#bestilbord">
 			<img src="billeder/bestilbord1.jpg" alt="Bestil bord">
 			<h2>Bestil Bord</h2>
-		</a>	
+		</a>
 		</div>
 		<div class="ui-block-c">
 		<a href="#minreservation">
 			<img src="billeder/reservation.jpg" alt="Min reservation">
 			<h2>Min Reservation</h2>
-		</a>	
+		</a>
 		</div>
-		
+
 		<div class="ui-block-d">
 			<img src="billeder/kontakt2.jpg" alt="Kontakt os">
 			<h2>Kontakt</h2>
@@ -56,18 +56,18 @@
 <div id="aboutsection">
 	<p>
 		Oriental sushi er en drøm om at lave et japansk inspireret spisested, hvor kvalitet,
-        kærlighed til håndværket, samt god stil og varme går op i en højere enhed. 
+        kærlighed til håndværket, samt god stil og varme går op i en højere enhed.
 	</p>
 	<p id="deskdisplay">
-		Vores kok tager ofte på inspirations-rejser for altid at kunne være med til at 
-		videreudvikle det japanske køkken, og vi sætter en ære i at servere nye og 
+		Vores kok tager ofte på inspirations-rejser for altid at kunne være med til at
+		videreudvikle det japanske køkken, og vi sætter en ære i at servere nye og
 		spændende retter for vores gæster.
 	</p>
 </div>
 
 <div id="submenu">
 	<div class="ui-grid-c my-breakpoint">
-		
+
 		<div class="ui-block-a">
 			<h3>Information</h3>
 			<ul class="sub">
@@ -95,7 +95,7 @@
 				<li><a href="">Tilbud</a></li>
 			</ul>
 		</div>
-		
+
 		<div class="ui-block-d">
 			<h3>Min Konto</h3>
 			<ul class="sub">
@@ -120,10 +120,10 @@
 <div data-role="content">
 	<h2>Bestil bord hos Oriental sushi</h2>
 	<form method="post" action="bestilbord.php">
-    
+
 		<label for="name">Navn:</label>
 		<input type="text" id="name" name="name" required/><br />
-   
+
 		<label for="tlf">Telefon: </label>
 		<input type="text" id="tlf" name="tlf" required/><br />
 
@@ -140,9 +140,9 @@
 		<input type="time" id="time" name="time" required/><br />
 
 		<label for="comments">Kommentar: </label><br/>
-		<textarea id="comments" name="comments"></textarea><br> 		
+		<textarea id="comments" name="comments"></textarea><br>
 
-		<button data-role="button">Bestil</button>    
+		<button data-role="button">Bestil</button>
 	</form>
 </div>
 <?php require 'footer.php'; ?>
@@ -159,7 +159,7 @@
 	<form method="post" action="reservation.php">
     	<label for="mail">email:</label>
     	<input type="text" id="mail" name="mail" /><br />
-   
+
     	<label for="bestnr">Reservations-nummer: </label>
     	<input type="text" id="bestnr" name="bestnr" required/><br />
 
@@ -243,7 +243,7 @@
 
 <div data-role="page" id="pagemenu">
 <header data-role="header" data-position="fixed">
-	<img class="logoimg" src="logo.png" alt="logo">
+	<img class="logoimg" src="billeder/logo.png" alt="logo">
 	<a href="javascript:history.back()">&cross;</a>
 </header>
 <div data-role="content">
@@ -255,7 +255,7 @@
     	<li data-icon="false"><a href="#bestilbord">Bestil bord</a></li>
     	<li data-icon="false"><a href="#">Kontakt</a></li>
 	</ul>
-	
+
 </div>
 <footer data-role="footer" >
 	<ul data-role="listview" data-inset="false" data-filter="false" id="menu2">
@@ -263,7 +263,7 @@
     	<li data-icon="false"><a href="#">Kundeservice</a></li>
     	<li data-icon="false"><a href="#">Ekstra</a></li>
     	<li data-icon="false"><a href="#">Min Konto</a></li>
-    	
+
 	</ul>
 </footer>
 </div>
