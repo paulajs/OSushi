@@ -1,0 +1,647 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+
+/* ------------------------------------Scrollbar-----------------------------------------*/
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.3);
+} 
+::-webkit-scrollbar-thumb {
+  background-color: #1d1d1d; 
+} 
+#menu1 li a, #menu1 li.ui-li-divider {
+  text-align: center !important;
+  border: none;
+  padding: 0.5% 0;
+  font-size: 1.5em;
+  font-weight: 300;
+  background-color: white;
+}
+#menu2 li a, #menu2 li.ui-li-divider {
+  text-align: center !important;
+  background-color: #1d1d1d;
+  color: white;
+  border: none;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 0.5% 0;
+}
+
+#menu1 li {
+  font-size: 2em;
+  padding: 1% 0;
+}
+img.logoimg {
+  cursor: pointer;
+}
+
+#pagemenu{
+	background-color: #1d1d1d;
+}
+ul#menu1 {
+  padding: 20% 0;
+  background-color: white;
+}
+ul#menu2 {
+  padding: 4% 0;
+  background-color: #1d1d1d;
+}
+
+#submenu ul.sub {
+  list-style: none;
+  padding: 7%;
+  border-top: 1px solid black;
+  margin-bottom: 20%;
+}
+#submenu ul.sub li a{
+  font-weight: 400;
+}
+
+header a.ui-link.ui-btn-left.ui-btn.ui-shadow.ui-corner-all {
+  display: none;
+}
+header #leftmenu{
+  float: left;
+  list-style: none;
+  width: 36%;
+  margin: 1em -3em;
+  color: #d03831;
+  text-shadow: none;
+}
+header #leftmenu li a{
+  float: left;
+  margin: 3% 7%;
+  font-weight: 400;
+}
+header #leftmenu li a:hover{
+  color: white;
+}
+header #rightmenu{
+  float: right;
+  list-style: none;
+  width: 36%;
+  color: #d03831;
+  text-shadow: none;
+}
+header #rightmenu li a{
+  float: right;
+  margin: 3% 7%;
+  font-weight: 400;
+}
+header #rightmenu li a:hover{
+  color: white;
+}
+header img{
+  position: absolute;
+  left: 49%;
+  transform: translate(-50%,0);
+}
+header.ui-header.ui-bar-inherit {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#dinreservationform footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#bestilbordform footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#opdater footer.ui-footer.ui-bar-inherit {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#page1 #slider li img{
+	display: block;
+	margin: 3% auto;
+	width: 70%;
+}
+
+.slide{
+  list-style: none;
+}
+h2 {
+  text-align: center;
+  font-weight: 300;
+  padding: 1% 0;
+  margin-bottom: 12%;
+    font-size: 22px;
+}
+
+h3 {
+  margin-top: 12.5%;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 4%;
+}
+div#submenu {
+  padding: 4% 0;
+}
+
+#bestilbord .ui-content {
+  padding: 7% 12%;
+}
+#bestilbord h2 {
+  border-bottom: 1px solid black;
+}
+#minreservation h2 {
+  border-bottom: 1px solid black;
+}
+#minreservation .ui-content {
+  padding: 7% 12%;
+}
+
+#page1 div img{
+	display: none;
+	margin: 3% auto;
+	width: 100%;
+}
+
+#aboutsection {
+  padding: 12% 0%;
+  font-weight: 200;
+  color: white;
+  margin-top: 0%;
+  border: 1px solid black;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 7%;
+  background-color: #1d1d1d;
+}
+#aboutsection p {
+  padding: 0 12%;
+  font-size: 0.8em;
+}
+.ui-content {
+  padding: 0;
+}
+
+#blockwrap {
+  display: block;
+  margin: 0 auto;
+  font-weight: 400;
+  padding-left: 6%;
+  padding-right: 3%;
+  padding-top: 4%;
+  padding-bottom: 7%;
+}
+div#slidecontainer {
+  margin-top: 5%;
+}
+.ui-grid-c.my-breakpoint {
+  text-align: center;
+}
+
+.ui-grid-c.my-breakpoint h2 {
+  font-weight: 300;
+  margin-top: -1%;
+}
+
+a.ui-link {
+  text-decoration: none;
+  color: black;
+}
+#blockwrap a.ui-link:link {
+  color: #222222;
+}
+#blockwrap a.ui-link:visited {
+  color: #222222;
+}
+
+form {
+  margin: 0 20%;
+}
+
+.notebest a.ui-link {
+  text-align: center;
+  display: block;
+  margin: 2% auto;
+}
+#bestilbordform .notebest a.ui-link {
+  margin-top: 12%;
+}
+#dinreservationform .notebest a.ui-link {
+  margin-top: 12%;
+}
+#opdater .notebest a.ui-link {
+  margin-top: 12%;
+}
+
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow{
+  font-weight: 300;
+  background-color: #1d1d1d;
+  box-shadow: none;
+  width: 86%;
+  margin: 4% auto;
+  color: white;
+}
+
+#deskdisplay{
+  display: block;
+}
+.notebest {
+  padding: 7% 20%;
+}
+
+.notebest p {
+  border: 1px solid black;
+  padding: 7%;
+}
+
+button.ui-btn.ui-shadow.ui-corner-all {
+  font-weight: 300;
+  background-color: #1d1d1d;
+  box-shadow: none;
+  width: 86%;
+  margin: 4% auto;
+  color: white;
+}
+
+
+footer.ui-footer.ui-bar-inherit {
+  font-weight: 300;
+  font-size: 0.7em;
+  line-height: 1.2em;
+  padding-top: 7%;
+  padding-bottom: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-align: center;
+}
+
+#pagemenu footer.ui-footer.ui-bar-inherit {
+  padding: 4% 1%;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+#menuwrap .ui-grid-c.my-breakpoint {
+  text-align: center;
+    padding: 0% 4%;
+}
+#menuwrap .ui-grid-c.my-breakpoint img {
+  width: 93%;
+}
+#menukort h2 {
+  margin-top: 7%;
+  margin-bottom: 4%;
+}
+#menuwrap h3 {
+  margin-top: 4%;
+  margin-bottom: 20%;
+}
+div#menuwrap {
+  margin-bottom: 4%;
+}
+#menukort h2 {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  border-bottom: 1px solid black;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#bestilbordform .notebest p a.ui-link {
+  margin-top: 4%;
+}
+footer img {
+  width: 100%;
+}
+
+footer a.ui-link.ui-btn.ui-shadow.ui-corner-all {
+  width: 5%;
+}
+
+/* ------------------------------------Media query 60em-----------------------------------------*/
+@media all and (max-width: 60em) { 
+	 	 
+	.my-breakpoint .ui-block-a, 
+	.my-breakpoint .ui-block-b, 
+	.my-breakpoint .ui-block-c,
+	.my-breakpoint .ui-block-d
+	{ 
+		width: 49%; 
+		color: black;
+	}
+  header a.ui-link.ui-btn-left.ui-btn.ui-shadow.ui-corner-all {
+  display: block;
+  float: right;
+  position: relative;
+  margin-top: 0;
+  margin-right: 9%;
+  color: #d03831;
+  background-color: #1d1d1d;
+  border: none;
+  font-size: 3em;
+  text-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  font-weight: 300;
+}
+header img {
+  position: relative;
+  left: 0;
+  transform: translate(0,0);
+  margin: 0 1em;
+}
+header.ui-header.ui-bar-inherit {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0;
+}
+#pagemenu header.ui-header.ui-bar-inherit {
+  position: fixed;
+}
+header #leftmenu{
+  display: none;
+}
+header #rightmenu{
+  display: none;
+}
+/*div#pagemenu {
+  padding-top: 0 !important;
+}*/
+#page1 #slider {
+  display: none;
+}
+#submenu{
+  display: none;
+}
+#page1 div img{
+	display: block;
+	width: 92%;	
+}
+h2 {
+  margin-bottom: 21%;
+}
+.notebest {
+  padding: 7% 7%;
+  margin-bottom: 20%;
+}
+/*#deskdisplay{
+  display: none;
+}*/
+#aboutsection {
+  font-weight: 300;
+  color: white;
+  margin-bottom: -1%;
+  background-color: #1d1d1d;
+}
+#blockwrap {
+  padding: 13% 5%;
+  font-weight: 400;
+}
+footer.ui-footer.ui-bar-inherit {
+  padding: 7% 12%;
+  font-weight: 300;
+  font-size: 0.7em;
+  line-height: 1.2em;
+  font-size: 0.7em;
+}
+#dinreservationform footer p {
+  width: 80%;
+}
+#minreservation footer.ui-footer.ui-bar-inherit {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+}
+#bestilbordform footer{
+  position: absolute;
+  bottom: 0;
+  width: auto;
+}
+
+#bestilbord .ui-content {
+  padding: 12%;
+}
+#minreservation .ui-content {
+  padding: 12%;
+}
+form {
+  margin: 0 7%;
+}
+ul#menu1 {
+ padding-top: 18%;
+  
+}
+#menu1 li a, #menu1 li.ui-li-divider {
+  padding: 0.5% 0;
+}
+
+#menu2 li a, #menu2 li.ui-li-divider {
+  padding: 2% 0;
+}
+#menu1 li {
+  font-size: 1.3em;
+  padding: 1% 0;
+}
+#menu2 li {
+  font-size: 1.3em;
+  padding: 0.5% 0;
+}
+.ui-content {
+  overflow-x: initial;
+}
+.ui-grid-c.my-breakpoint h2 {
+  border-bottom: 1px solid black;
+}
+#menuwrap .ui-grid-c.my-breakpoint {
+  text-align: center;
+}
+#menuwrap .ui-grid-c.my-breakpoint img {
+  width: 80%;
+}
+#menukort h2 {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  border-bottom: 1px solid black;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+footer img {
+  width: 100%;
+}
+
+footer a.ui-link.ui-btn.ui-shadow.ui-corner-all {
+  width: 10%;
+}
+}
+
+
+/* ------------------------------------Media query 35em-----------------------------------------*/
+
+@media all and (max-width: 35em) {
+	.my-breakpoint .ui-block-a, 
+	.my-breakpoint .ui-block-b, 
+	.my-breakpoint .ui-block-c,
+	.my-breakpoint .ui-block-d
+	{ 
+		width: 100%; 
+		float:none; 
+		color: black;
+	}
+  .ui-grid-c.my-breakpoint h2 {
+  border-bottom: 1px solid black;
+}
+  header a.ui-link.ui-btn-left.ui-btn.ui-shadow.ui-corner-all {
+  display: block;
+  float: right;
+  position: relative;
+  margin-top: 0;
+  margin-right: 9%;
+  color: #d03831;
+  background-color: #1d1d1d;
+  border: none;
+  font-size: 3em;
+  text-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  font-weight: 300;
+}
+header img {
+  position: relative;
+  left: 0;
+  transform: translate(0,0);
+  margin: 0 1em;
+}
+header.ui-header.ui-bar-inherit {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+header #leftmenu{
+  display: none;
+}
+header #rightmenu{
+  display: none;
+}
+div#pagemenu {
+  padding-top: 0 !important;
+}
+#page1 #slider {
+  display: none;
+}
+ul#menu1 {
+ padding-top: 34%;
+ padding-bottom: 12%;
+  
+}
+
+h2 {
+  margin-bottom: 21%;
+}
+
+#blockwrap{
+	padding: 7.6% 7.6%;
+}
+
+#page1 div img{
+	display: block;
+	
+}
+#deskdisplay{
+  display: none;
+}
+#submenu{
+  display: none;
+}
+#aboutsection {
+  padding: 4% 0%;
+  font-weight: 200;
+  color: black;
+  margin-top: 0%;
+  border: 1px solid black;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 12%;
+  background-color: transparent;
+}
+footer.ui-footer.ui-bar-inherit {
+  padding: 12% 12%;
+  font-weight: 300;
+  font-size: 0.7em;
+  line-height: 1.2em;
+}
+.notebest{
+	padding: 12% 12%;
+  margin-bottom: 38%;
+}
+.notebest p{
+	display: block;
+	margin: 0 auto;
+}
+
+#minreservation footer.ui-footer.ui-bar-inherit {
+  position: relative;
+  width: auto;
+}
+
+#dinreservationform footer p {
+  width: 80%;
+}
+#opdater footer.ui-footer.ui-bar-inherit {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+}
+
+footer img {
+  width: 100%;
+}
+
+footer a.ui-link.ui-btn.ui-shadow.ui-corner-all {
+  width: 10%;
+}
+
+#aboutsection {
+  margin-left: 7.6%;
+  margin-right: 7.6%;
+}
+
+#bestilbord .ui-content {
+  padding: 7%;
+}
+#minreservation .ui-content {
+  padding: 7%;
+}
+form {
+  margin: 0 12px;
+  margin-bottom: 7%;
+}
+header img {
+  width: 16em;
+  margin: 1%;
+}
+header a.ui-link.ui-btn-left.ui-btn.ui-shadow.ui-corner-all {
+  margin-top: -0.2em;
+}
+
+#menu1 li a, #menu1 li.ui-li-divider {
+  padding: 1.5% 0;
+  font-size: 1em;
+}
+
+#menu2 li a, #menu2 li.ui-li-divider {
+  padding: 1.5% 0;
+  font-size: 0.7em;
+}
+#menuwrap .ui-grid-c.my-breakpoint img {
+  width: 80%;
+}
+#menukort h2 {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  border-bottom: 1px solid black;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+}
