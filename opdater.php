@@ -18,15 +18,12 @@
 <div class ="notebest">
 <p>
 <?php
-/**
-* @todo trim ?
-*/
 $name = trim($_POST['name']);
 $tlf =  trim($_POST['tlf']);
 $email =trim($_POST['email']);
 $pers = trim($_POST['pers']);
 $date = trim($_POST['date']);
-$time = trim($_POST['time']); 
+$time = trim($_POST['time']);
 $comments = trim($_POST['comments']);
 
 $display_time= split(':', $time)[0].':'.split(':', $time)[1];
@@ -43,7 +40,7 @@ else{
 	$dbc = mysqli_connect('localhost', 'root', 'root', 'Bestil_Bord') // connect to database
 	or die('Error connecting to MySQL server.');
 
-	$query = "UPDATE `reservationer` SET name ='$name', tlf='$tlf', email='$email', pers ='$pers', dato ='$date', tid ='$time', comments ='$comments'  WHERE `best_nr`= '$bestnr'";
+	$query = "UPDATE `reservationer` SET name ='$name', tlf='$tlf', email='$email', pers ='$pers', dato ='$date', `time` ='$time', comments ='$comments'  WHERE `best_nr`= '$bestnr'";
 
 	$msg = 'Du har ændret din reservation til'.$pers.' d. '.$display_date.' kl. '.$display_time.'. Dit bestillings-nymmer er stadig '.$bestnr;
 
@@ -53,7 +50,7 @@ else{
 	or die('Error querying database.');
 
 	mysqli_close($dbc);
-	
+
 	?>
 		Hej <?= $name; ?>, Du har ændret din reservation hos Oriental Sushi.
 		Du har bestilt bord til <?= $pers; ?> personer d. <?= $display_date; ?> kl. <?= $display_time ?>.

@@ -36,14 +36,14 @@ if (isset($_POST['submit'])){
 	$name = $row['name'];
 	$pers = $row['pers'];
 	$date = $row['dato'];
-	$time = $row['tid']; 
+	$time = $row['time'];
 
 	$display_time= split(':', $time)[0].':'.split(':', $time)[1];
 	$display_date = date('d-m-y', strtotime($date));
 	$comments = $row['comments'];
 
 	?>
-	Hej <?= $name ?> Du har reserveret bord hos Oriental Sushi til <?= $pers ?> personer d. 
+	Hej <?= $name ?> Du har reserveret bord hos Oriental Sushi til <?= $pers ?> personer d.
 	<?= $display_date ?> kl. <?= $display_time ?>. Vi glæder os til dit besøg.
 	<?php
 
@@ -60,14 +60,14 @@ if (isset($_POST['submit'])){
 	$name = $row['name'];
 	$pers = $row['pers'];
 	$date = $row['dato'];
-	$time = $row['tid'];
-	$tlf = $row['tlf']; 
+	$time = $row['time'];
+	$tlf = $row['tlf'];
 	$tlf = $row['tlf'];
 	$email = $row['email'];
-	
+
 	$display_time= split(':', $time)[0].':'.split(':', $time)[1];
 	$display_date = date('d-m-y', strtotime($date));
-	$comments = $row['comments'];	
+	$comments = $row['comments'];
 
 ?>
 </p>
@@ -75,10 +75,10 @@ if (isset($_POST['submit'])){
 	$( ".notebest p" ).css( "display", "none" );
 </script>
 <form method="post" action="opdater.php">
-    
+
     <label for="name">Navn:</label>
     <input type="text" id="name" name="name" value="<?php echo $name ?>" /><br />
-   
+
     <label for="tlf">Telefon: </label>
     <input type="text" id="tlf" name="tlf" value="<?php echo $tlf ?>"/><br />
 
