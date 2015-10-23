@@ -29,14 +29,16 @@ or die('Error connecting to MySQL server.');
 
 if (isset($_POST['submit'])){
 
-	$query = "SELECT * FROM reservationer WHERE `best_nr` = '$bestnr'";
-	$result = mysqli_query($dbc, $query);
-
-	$row = mysqli_fetch_array($result);
-	$name = $row['name'];
-	$pers = $row['pers'];
-	$date = $row['dato'];
-	$time = $row['time'];
+	$query = 'SELECT `name`, `pers`, `dato`, `time` FROM reservationer WHERE `best_nr` = ?';
+	$statement = mysqli_prepare($dbc, $query);
+	mysqli_stmt_bind_param(
+		$statement,
+		's',
+		$bestnr
+	);
+	mysqli_stmt_execute($statement);
+	mysqli_stmt_bind_result($statement, $name, $pers, $date, $time);
+	mysqli_stmt_fetch($statement);
 
 	$display_time= split(':', $time)[0].':'.split(':', $time)[1];
 	$display_date = date('d-m-y', strtotime($date));
@@ -48,27 +50,31 @@ if (isset($_POST['submit'])){
 	<?php
 
 } else if(isset($_POST['delete_button'])) {
-	$query = "DELETE FROM  reservationer WHERE  `best_nr` =  '$bestnr'";
-	mysqli_query($dbc, $query)
- 	or die('Error querying database.');
+	$query = 'DELETE FROM  reservationer WHERE  `best_nr` =  ?';
+	$statement = mysqli_prepare($dbc, $query);
+	mysqli_stmt_bind_param(
+		$statement,
+		's',
+		$bestnr
+	);
+	$x = mysqli_stmt_execute($statement);
+	var_dump($x);
  	echo "Du har du aflyst dit besøg";
 } else if(isset($_POST['update_button'])){
 
-	$query = "SELECT * FROM reservationer WHERE `best_nr` = '$bestnr'";
-	$result = mysqli_query($dbc, $query);
-	$row = mysqli_fetch_array($result);
-	$name = $row['name'];
-	$pers = $row['pers'];
-	$date = $row['dato'];
-	$time = $row['time'];
-	$tlf = $row['tlf'];
-	$tlf = $row['tlf'];
-	$email = $row['email'];
-
+	$query = 'SELECT `name`, `pers`, `dato`, `time`, `tlf`, `email` FROM reservationer WHERE `best_nr` = ?';
+	$statement = mysqli_prepare($dbc, $query);
+	mysqli_stmt_bind_param(
+		$statement,
+		's',
+		$bestnr
+	);
+	mysqli_execute($statement);
+	mysqli_stmt_bind_result($statement, $name, $pers, $date, $time, $tlf, $email);
+	mysqli_stmt_fetch($statement);
 	$display_time= split(':', $time)[0].':'.split(':', $time)[1];
-	$display_date = date('d-m-y', strtotime($date));
+	$display_date = date('d-m-Y', strtotime($date));
 	$comments = $row['comments'];
-
 ?>
 </p>
 <script type="text/javascript">
@@ -89,7 +95,7 @@ if (isset($_POST['submit'])){
     <input type="text" id="pers" name="pers" value="<?php echo $pers ?>"/><br />
 
     <label for="date">Dato: </label>
-    <input type="date" id="date" name="date" value="<?php echo $date ?>"/><br />
+    <input type="date" id="date" name="date" value="<?php echo $display_date ?>"/><br />
 
     <label for="time">Tid: </label>
     <input type="time" id="time" name="time" value="<?php echo $time ?>"/><br />

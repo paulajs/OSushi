@@ -44,9 +44,17 @@ if($name === '' || $tlf === '' || $pers === '' || $date === '' || $time === '')
 else{
 	$dbc = mysqli_connect('localhost', 'root', 'root', 'Bestil_Bord');
 
-	$query = "INSERT INTO reservationer (name, tlf, email, pers, dato, `time`, comments, best_nr)" .
-	" VALUES ('$name', '$tlf', '$email', '$pers', '$date', '$time','$comments','$bestillings_nummer')";
-	$result = mysqli_query($dbc, $query);
+	$query = 'INSERT INTO reservationer (name, tlf, email, pers, dato, `time`, comments, best_nr)' .
+	' VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+	$statement = mysqli_prepare($dbc , $query);
+	mysqli_stmt_bind_param(
+		$statement,
+		'ssssssss',
+		$name,$tlf,$email,$pers,$date,$time,$comments,$bestillings_nummer
+	);
+	mysqli_stmt_execute($statement);
+
+
 	$subject = 'Du har bestilt bord hos Oriental Sushi';
 
 	$msg = 'Du har bestilt bord hos Oriental Sushi til '.$pers.' personer d. '.$display_date.' kl. '.$display_time.'. Dit bestillings-nummer er '.$bestillings_nummer;
